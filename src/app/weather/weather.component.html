@@ -1,12 +1,11 @@
 <mat-form-field>
-  <input matInput placeholder="Enter city" #cityCtrl (keydown.
-         enter)="search(cityCtrl.value)">
+  <input matInput placeholder="Enter city" #cityCtrl (keydown.enter)="search(cityCtrl.value)">
   <mat-icon matSuffix (click)="search(cityCtrl.value)">search</mat-icon>
 </mat-form-field>
 <mat-card *ngIf="weather">
   <mat-card-header>
     <mat-card-title>{{weather.name}}, {{weather.sys.country}}</mat-card-title>
-      <mat-card-subtitle>{{weather.weather[0].main}}</mat-card-subtitle>
+    <mat-card-subtitle>{{weather.weather[0].main}}</mat-card-subtitle>
   </mat-card-header>
   <img mat-card-image src="https://openweathermap.org/img/wn/{{weather.
 weather[0].icon}}@2x.png" [alt]="weather.weather[0].main">
